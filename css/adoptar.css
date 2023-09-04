@@ -1,0 +1,107 @@
+
+main{
+    padding-top: 11vh;
+}
+main h1{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.cards{
+    display: flex;
+    justify-content: space-around; /* Para que tengan la misma separación */
+    flex-wrap: wrap; /* Para que se ajusten a distintos tipos de pantalla */
+    margin: 0 auto; /* Para que estén centrados */
+}
+.cards > button{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Para tarde 0.3s al modificarse */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: solid 1px black;
+}
+
+
+.cards > button:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+    border: solid 1px black;
+}
+
+.cards > button >img {
+    width: 100%;
+    height: 100%;
+}
+
+/* TEXTO INFERIOR*/
+
+.text-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 9px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    transition: all 0.5s ease-out;
+}
+
+.text-bottom p {
+    text-align: center;
+}
+
+.cards > button:hover .text-bottom {
+    background: rgba(0, 0, 0, 0.93);
+    font-size: 18px;
+}
+
+
+/* MODAL*/
+.modal-header, .close{
+    background-color: #44A8C0;
+
+}
+.adoptar-title{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+.adoptar-body{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.imagen-body{
+    background-color: red;
+    height: 40vh;
+}
+.imagen-body>img{
+    width: 100%;
+    height: 100%;
+}
+.informacion{
+    align-self: center;
+    padding: 10px;
+}
+.informacion>div{
+    padding-bottom: 5px;
+}
+.info{
+    font-weight: bold;
+    font-size: 21px;
+    font-family: 'Oswald', sans-serif;
+}
+.adoptar-footer{
+    padding: 10px;
+}

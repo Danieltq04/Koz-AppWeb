@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+main{
+    background-image: url(../imagenes/imagen_cachorro.jpeg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    min-height: 89vh;
+    margin-top: 11vh;
+    width: 100vw;
+    padding-bottom: 30px;
+}
+
+.contenedor-principal{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.izquierdo{
+    background-color: none;    
+}
+.derecho{
+    justify-content: center;
+    padding: 10px;
+    color: antiquewhite;
+}
+.arriba{
+    background-color: none;
+    display: flex;
+    justify-content: center;
+}
+.abajo{
+    background-color: none;
+}
+#imagen-diseniada{
+    width: 400px;
+    padding: 1rem;
+}
+
+
+.cards{
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.cards > div{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; 
+}
+.bloque1{
+    background-image: url("../imagenes/logo1.jpg");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+
+}
+.bloque2{
+    background-image: url("../imagenes/logo2.png");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.bloque3{
+    background-image: url("../imagenes/logo3.jpg");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+
+}
+.bloque4{
+    background-image: url("../imagenes/logo4.jpg");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.bloque5{
+    background-image: url("../imagenes/logo5.jpg");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.bloque6{
+    background-image: url("../imagenes/logo6.jpg");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.bloque7{
+    background-image: url("../imagenes/logo7.png");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.bloque8{
+    background-image: url("../imagenes/logo8.png");
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.cards > div:hover{
+    transform: scale(1.04);
+}
+
+
+
+a{
+    width: 100%;
+    height: 100%;
+}
+
+.derecho h1{
+    font-size: 20px;
+    text-align: center;
+}
+
+.arriba img{
+    width: 100%;
+} 
+
+/*Vista Tablets*/
+@media (min-width: 768px){
+    .contenedor-principal{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .derecho h1{
+        font-size: 200%;
+    }
+    .derecho{
+        justify-content: center;
+        padding: 4rem;
+        background-color: none;
+        color: antiquewhite;
+        min-height: 80vh;
+    }
+    .izquierdo{
+        min-height: 80vh;
+    }
+    .arriba img{
+        width: auto
+    }
+}
+
+/*Vista Computadoras*/
+@media (min-width: 1200px){
+
+} 

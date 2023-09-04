@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-register</title>
+    <link rel="shortcut icon" href="../images/perrologo2.png">
+    <link rel="stylesheet" href="../css/sweetAlert2/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="../css/volante.css">
+
+</head>
+<body>
+    <div class="hola">
+         <!--
+        <video class="background" muted autoplay loop src="/video bg/pexels-andrew-kota-6234309.mp4"/>
+        -->
+    </div>
+    <div class="bg">
+        <div class="form-box">
+            <div class="button-box">
+                <!--
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn">Agregar volante</button>
+                -->
+                <div class="imagen-perro">
+                    <p class="se-busca">SE BUSCA</p>
+                </div>
+            </div>
+            
+            
+               
+
+
+            <form id="Login" class="input-group">
+                <input id="form-urlImagen" type="text" class="input-field" placeholder="Ingrese el link de la imagen" required>
+                <input id="form-descripcion" type="text" class="input-field" placeholder="Ingrese la descripción" required>
+
+                <select class="custom-select input-field" autocomplete
+                    onmousedown="if(this.options.length>3){this.size=3;}" onchange='this.size=0;'
+                    onblur="this.size=0;" id="select-form-ubicacion" required>
+                    <option value="">Seleccione la ubicación</option>
+                    <!-- <option value="Adolfo Alsina">Adolfo Alsina</option>
+                    <option value="Two">Two</option>
+                    <option value="Quilmes">Quilmes</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Three">Three</option>
+                    <option value="Three">Three</option> -->
+                    <option value="Adolfo Alsina">Adolfo Alsina</option>
+                    <option value="Alberti">Alberti</option>
+                    <option value="Almirante Brown">Almirante Brown</option>
+                    <option value="Avellaneda">Avellaneda</option>
+                    <option value="Ayacucho">Ayacucho</option>
+                    <option value="Bahía Blanca">Bahía Blanca</option>
+                    <option value="Barracas">Barracas</option>
+                    <option value="Benito Juárez">Benito Juárez</option>
+                    <option value="Berazategui">Berazategui</option>
+                    <option value="Cañuelas">Cañuelas</option>
+                    <option value="Castelli">Castelli</option>
+                    <option value="Chacabuco">Chacabuco</option>
+                    <option value="Chascomús">Chascomús</option>
+                    <option value="Chivilcoy">Chivilcoy</option>
+                    <option value="Colón">Colón</option>
+                    <option value="Constitucion">Constitucion</option>
+                    <option value="Coronel">Coronel</option>
+                    <option value="Coronel Suárez">Coronel Suárez</option>
+                    <option value="Dolores">Dolores</option>
+                    <option value="Escobar">Escobar</option>
+                    <option value="Esteban Echeverría">Esteban Echeverría</option>
+                    <option value="Ezeiza">Ezeiza</option>
+                    <option value="Florencio Varela">Florencio Varela</option>
+                    <option value="General Alvear">General Alvear</option>
+                    <option value="General Belgrano">General Belgrano</option>
+                    <option value="General Viamonte">General Viamonte</option>
+                    <option value="Hipólito Yrigoyen">Hipólito Yrigoyen</option>
+                    <option value="Ituzaingó">Ituzaingó</option>
+                    <option value="La Matanza">La Matanza</option>
+                    <option value="Lanús">Lanús</option>
+                    <option value="La Plata">La Plata</option>
+                    <option value="Leandro N. Alem">Three</option>
+                    <option value="Lomas de Zamora">Lomas de Zamora</option>
+                    <option value="Luján">Luján</option>
+                    <option value="Malvinas Argentinas">Malvinas Argentinas</option>
+                    <option value="Merlo">Merlo</option>
+                    <option value="Moreno">Moreno</option>
+                    <option value="Morón">Morón</option>
+                    <option value="Necochea">Necochea</option>
+                    <option value="Pilar">Pilar</option>
+                    <option value="Pinamar">Pinamar</option>
+                    <option value="Quilmes">Quilmes</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="Saavedra">Saavedra</option>
+                    <option value="San Nicolás">San Nicolás</option>
+                    <option value="San Vicente">San Vicente</option>
+                    <option value="Tandil">Tandil</option>
+                    <option value="Tigre">Tigre</option>
+                    <option value="Tres Arroyos">Tres Arroyos</option>
+                    <option value="Tres de Febrero">Tres de Febrero</option>
+                    <option value="Vicente López">Vicente López</option>
+                    <option value="Villa Gesell">Villa Gesell</option>
+                    <option value="Zárate">Zárate</option>
+                </select>
+
+                <input id="form-telefono" type="text" class="input-field" placeholder="Ingrese el teléfono" required>
+
+
+                <div class="form-group" id="form-tipo">
+
+                <div class="input-field">
+                    <p style="color: gray; padding-bottom: 9px;">Tipo de animal</p>
+
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                        value="Perro" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        Perro
+                    </label>
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                        value="Gato">
+                    <label class="form-check-label" for="gridRadios2">
+                        Gato
+                    </label>
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                        value="Otro">
+                    <label class="form-check-label" for="gridRadios3">
+                        Otro
+                    </label>
+                </div>
+            </div>
+
+
+                <button type="submit" class="submit-btn" id="login-form" style="margin-top: 15px;">Agregar volante</button>
+                
+                
+            </form>
+
+
+
+            
+
+            
+        </div>
+    </div>
+
+
+
+<!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- SDK FIREBASE -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+  <!-- Don't change the format for any other products. -->
+  <!-- etc. -->
+
+  <script src="../js/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="../js/volante.js"></script>
+
+</body>
+</html>

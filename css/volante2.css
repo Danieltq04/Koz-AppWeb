@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    margin-top: 50px;
+
+}
+.conteiner-form{
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+/*Vista Tablets*/
+@media (min-width: 768px){
+    .conteiner-form{
+        width: 50%;
+    }
+}
+
+/*Vista Computadoras*/
+@media (min-width: 1200px){
+
+}
+

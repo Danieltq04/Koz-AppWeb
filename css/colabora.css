@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header,footer{
+    min-height: 11vh;
+    background-color: rgb(143, 143, 211);
+}
+main{
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.izquierdo{
+    background-color: teal;
+    min-height: 60vh;
+    display: flex;
+    position: relative;
+    max-width: 400px;
+}
+.derecho{
+    background-color: aquamarine;
+    min-height: 60vh;
+
+}
+
+
+
+
+.imagen1{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background-color: red;
+    width: 40%;
+    height: 50%;
+    transform: rotate(-6deg);
+}
+.imagen2{
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+    transform: rotate(6deg);
+    background-color: tomato;
+    width: 40%;
+    height: 50%;
+}
+.imagen-huellas{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 21vh;
+    height: 21vh;
+    background-color: chocolate;
+}
+
+
+
+/*Vista Tablets*/
+@media (min-width: 768px){
+    main{
+        display: grid;
+        grid-template-columns: 45% 55%;
+    
+    }
+    .izquierdo{
+        max-width: none;
+    }
+}
+
+/*Vista Computadoras*/
+@media (min-width: 1200px){
+
+}

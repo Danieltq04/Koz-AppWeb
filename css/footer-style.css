@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+footer section {
+    margin: 10px;
+    width: 30%;
+    height: 60%;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 370px;
+    font-family: 'Roboto', sans-serif;
+   
+    /*background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    ;*/
+    background-color: #44A8C0;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+}
+.service div {
+    display: flex;
+}
+
+.service div img {
+    width: 25px;
+    height: auto;
+}
+
+.info img {
+    width: 150px;
+    height: auto;
+}
+.service h3 {
+    padding-left: 2px;
+}
+.service p {
+    margin-left: 11px;
+}
+
+.social-media img {
+    width: 28px;
+    height: auto;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.social-media {
+    margin-right: 0;
+}
+
+
+
+.info p {
+    font-weight: 300;
+    padding-right: 25px;
+}
+
+
+footer button {
+    cursor: pointer;
+    background-color: rgb(35, 163, 210);
+    border: none;
+    border-radius: 5px;
+    color: rgb(32, 31, 31);
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+footer button:hover {
+    background-color: rgb(81, 175, 209);
+    color: rgb(56, 54, 54);
+    transition: all 0.5s;
+    
+}
+
+
+
+
+
+
+
+
+@media (min-width: 360px) {
+    footer {
+       
+       height: auto;
+    }
+    .container {
+         flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+    }
+
+    .container p {
+        font-size: 14px;
+    }
+    .container h3 {
+        font-size: 16px;
+    }
+    .social-media {
+        margin-bottom: 30%;
+        font-size: 15px;
+
+    }
+
+    
+.service div img {
+    width: 17px;
+    height: auto;
+}
+
+.social-media img {
+    width: 19px;
+    height: auto;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.social-media img:hover {
+    width: 24px;
+    padding: 0;
+    transition: all 0.5s;
+  
+}
+
+footer input {
+    width: 100px;
+}
+
+footer button {
+    width: 43px;
+    font-size: 10px;
+    text-align: center;
+    padding: 5px 3px;
+}
+
+footer section {
+    width: 55%;
+   
+}
+}
+
+
+
+
+
+@media (min-width: 580px) {
+    footer input {
+        width: 135px;
+    }
+    
+    footer button {
+        width: 52px;
+        font-size: 11px;
+        text-align: center;
+        padding: 4px 3px;
+    }
+    
+.social-media img {
+    width: 21px;
+    height: auto;
+    padding: 7px;
+    transition: all 0.5s;
+}
+
+.container p {
+    font-size: 15px;
+}
+.container h3 {
+    font-size: 17px;
+    
+}
+
+
+.social-media img:hover {
+    width: 26px;
+    padding: 0;
+    transition: all 0.5s;
+  
+}
+}
+
+
+@media (min-width: 670px) {
+    footer {
+        
+       height: 370px;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .social-media {
+        margin-bottom: 10px;
+    }
+
+
+    footer input {
+        width: 115px;
+    }
+    
+    footer button {
+        width: 52px;
+        font-size: 11px;
+        padding: 5px 3px;
+    }
+    
+.social-media img {
+    width: 22px;
+    height: auto;
+    padding: 5px;
+    transition: all 0.5s;
+  
+}
+
+
+.social-media img:hover {
+    width: 27px;
+    padding: 0;
+    transition: all 0.5s;
+  
+}
+
+
+
+}
+
+
+
+@media (min-width: 1024px) {
+    footer input {
+        width: 195px;
+    }
+    
+    footer button {
+        width: 53px;
+        font-size: 12px;
+        text-align: center;
+        padding: 4px 3px;
+    }
+    
+.social-media img {
+    width: 42px;
+    
+    padding: 10px;
+    transition: all 0.5s;
+  
+}
+
+.social-media img:hover {
+    width: 33px;
+    padding: 0;
+    transition: all 0.5s;
+  
+}
+
+
+.container p {
+    font-size: 17px;
+}
+.container h3 {
+    font-size: 19px;
+}
+
+
+.service div img {
+    width: 25px;
+  
+}
+.service h3, .social-media h3{
+    text-align: left;
+    font-weight: bold;
+}
+}
+.service p{
+    margin: 0;
+}
+.service div{
+    padding-bottom: 15px;
+}
+.service img{
+    padding-right: 5px;
+}
+.social-media{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.info{
+    text-align: center;
+}
+.img-f{
+    width: 40px!important;
+}

@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+main{ 
+    display: flex;
+    flex-direction: column;
+    padding: 11vh 10px 30px 10px;
+}
+a{
+    text-decoration: none;
+}
+.fondo{
+    width: 100%;
+   
+}
+
+.fondo a img, h1 img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+h1 {
+    padding: 4px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2em;
+    background:linear-gradient(rgb(91, 86, 161), rgb(28, 21, 50),rgb(137, 129, 176),rgb(77, 76, 81));
+    margin-bottom: 15px;
+    color:white;
+}
+h2{
+    padding-left: 2px;
+    margin: 0;
+}
+
+h2,.fondo a img, h1 img{
+    display: inline-block;
+    text-align: center;}
+
+.fondo {padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    background-color: white;
+    margin: 2px;
+    border: 2px solid #e7e9eb;
+    box-shadow: .4em .4em 1em rgba(0,0,0, .2);
+    border-radius: .7em;
+    margin-top: 25px;
+    /* box-shadow: -1px -4px 25px rgb(71, 37, 157) inset, 1px 4px 3px rgb(126, 137, 182); */
+}
+
+.fondo ul{list-style:none;}
+
+.fondo ul li{
+    display: inline-block;
+}
+.fondo ul li::before{
+    content: " ";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/patita.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+    margin-right: 10px;
+    border-radius: 100%;
+    
+}
+.wsp::before{
+    content: " ";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/wsp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+    margin-right: 10px;
+    border-radius: 100%;
+}
+.fondo a:hover{color: black;}
+.fondo a:visited{color: black;}
+:active{
+    color:black;
+}
+div iframe {
+    border: none;
+    border-radius: 5px ;
+    width: 100%;
+    height: 100px;
+}
+
+/*Vista Tablets*/
+@media (min-width: 768px){
+    main{
+        display: grid;
+        grid-template-columns: 46% 46%;
+        gap: 20px;
+        justify-content: space-evenly;
+        padding-top: 11vh;
+    }
+    .fondo{
+
+    }
+}
+/*Vista Computadoras*/
+@media (min-width: 1200px){
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}

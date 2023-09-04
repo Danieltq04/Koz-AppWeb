@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../images/perrologo2.png">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../css/adoptar.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../images/logopuppycare.png" alt="" id="logo">
+            </a>
+        </div>
+        <div class="navbard">
+
+            <span class="nav-bar" id="btnMenu"><i class="fa-solid fa-bars"></i> Menu </span>
+            <nav class="main-nav">
+                <ul class="menu" id="menu">
+                    <li class="menu__item"><a href="./refugios.html" class="menu__link">Refugios</a></li>
+                    <li class="menu__item"><a href="./adoptar.html" class="menu__link">Adoptar</a></li>
+                    <li class="menu__item"><a href="./perdidos.html" class="menu__link">Perdidos</a></li>
+                    <li class="menu__item"><a href="./colabora.html" class="menu__link">Colabora</a></li>
+                    <li class="menu__item"><a href="./programar.html" class="menu__link">Codeá</a></li>
+                    <li class="menu__item"><a href="./contacto.html" class="menu__link">Contacto</a></li>
+                    <li class="menu__item ingresar"><a href="./login.html" class="menu__link">Ingresar</a>
+                    </li>
+                    <li class="menu__item logueado"><label id="logged-user1" class="menu__link" data-toggle="modal"
+                            data-target="#perfilModal">Logueado</label></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <h1>Estos compañeros de vida necesitan un hogar</h1>
+        <div class="cards" id="card-adopcioens">
+            <!-- <div class="tarjeta bloque1">
+                <img src="../images/dontorcuato.png" class="imagen-perdido">
+                <div class="text-bottom">
+                    <p>${libro.titulo}</p>
+                </div>
+            </div>
+            <div class="tarjeta bloque1">
+                <img src="../images/elcampitorefugio.png" class="imagen-perdido">
+                <div class="text-bottom">
+                    <p>${libro.titulo}</p>
+                </div>
+            </div>
+            <div class="tarjeta bloque1">
+                <img src="../images/elcampitorefugio.png" class="imagen-perdido">
+                <div class="text-bottom">
+                    <p>${libro.titulo}</p>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+
+    <!-- Modal LOGIN -->
+    <div class="modal fade" id="perfilModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mi Perfil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <!--
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                -->
+                    <button type="button" class="btn btn-danger" id="logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Adopción-->
+    <div class="modal fade" id="adoptarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="adoptar-title">
+                        
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="adoptar-body" id="modal-body">
+                    <div class="imagen-body">
+
+                    </div>
+                    <div class="informacion" id="informacion">
+                        <div class="raza">
+                            <!-- <label for="autor" class="info">Raza: </label>
+                            <div id="dato-raza">
+                                <p>Comun</p>
+                            </div> -->
+                        </div>
+                        <div class="tamanio">
+                            
+                        </div>
+                        <div class="sexo">
+                            <!-- <label for="autor" class="info">Sexo: </label>
+                            <div id="dato-sexo">
+
+                            </div> -->
+                        </div>
+                        <div class="tel-refugio">
+                            <!-- <label for="autor" class="info">Telefono Refugio: </label>
+                            <div id="dato-tel">
+
+                            </div> -->
+                        </div>
+                        <div class="ubicacion">
+                            <!-- <label for="autor" class="info">Ubicación: </label>
+                            <div id="dato-ubicacion">
+
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="adoptar-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+    <script src="../js/header-footer.js"></script>
+    <script type="module" src="../js/adoptar.js"></script>
+</body>
+
+</html>
