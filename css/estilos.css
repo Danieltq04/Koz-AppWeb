@@ -1,3 +1,5 @@
+
+
 /* ************************************************************* */
 /*                              CAROUSEL                         */
 /* ************************************************************* */
@@ -296,4 +298,50 @@ main{
         top: 70px;
         right: 70px;
     }
+}
+
+
+/* ************************************************************* */
+/*                              Index                         */
+/* ************************************************************* */
+.conteiner{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reloj {
+    background-image: url("../img/SinAguja.png");
+    position: relative; /* Cambia a posición relativa */
+    width: 65%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1; /* Establece la relación de aspecto 1:1 */
+    z-index: -2;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aguja {
+    background-image: url("../img/Aguja.png");
+    position: absolute;
+    top: 50%; /* Coloca la aguja en la mitad vertical del reloj */
+    left: 50%; /* Coloca la aguja en la mitad horizontal del reloj */
+    transform: translate(-50%, -50%); /* Centra la aguja correctamente */
+    width: 65%; /* Ajusta el ancho de la aguja al 100% */
+    aspect-ratio: 1 / 1; /* Establece la relación de aspecto 1:1 */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sensores{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+    width: 60%;
+}
+.data{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }

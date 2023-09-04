@@ -68,18 +68,49 @@ const loginCheck = (user) => {
     console.log("El usuario no está logueado")
   }
 };
-const refUser = null;
-refUser.on('value', (snapshot) => {
-  const valor = snapshot.val();
-  // Hacer algo con el valor leído
-  console.log(valor);
+let refUser = null;
+let refApp = null;
+let refDev = null;
 
-});
 
 auth.onAuthStateChanged((user) => {
     if (user) {
       console.log("signin");
+      refUser = database.ref(user.uid + "/Username");
+      refUser.on('value', (snapshot) => {
+        const valor = snapshot.val();
+        console.log(valor);
+      
+      });
+      refApp = database.ref(user.uid + "/Application");
+      refApp.on('value', (snapshot) => {
+        const valor = snapshot.val();
+        console.log(valor);
+        var cadena = "Desactivado-184-30-5-1-1-0-0-0";
+        var partes = cadena.split("-");
 
+        var var1 = partes[0];
+        var var2 = partes[1];
+        var var3 = partes[2];
+        var var4 = partes[3];
+        var var5 = partes[4];
+        var var6 = partes[5];
+        var var7 = partes[6];
+        var var8 = partes[7];
+        var var9 = partes[8];
+
+        // Ahora puedes acceder a las variables var1 y var2
+        console.log("var1: " + var1);
+        console.log("var2: " + var2);
+        console.log("var3: " + var3);
+        
+      });
+      refDev = database.ref(user.uid + "/Device");
+      refDev.on('value', (snapshot) => {
+        const valor = snapshot.val();
+        console.log(valor);
+      
+      });
       // const referencia = database.ref(user.uid /*+ "/Username"*/);
 
       // referencia.on('value', (snapshot) => {

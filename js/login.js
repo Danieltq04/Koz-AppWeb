@@ -113,8 +113,8 @@ signUpForm.addEventListener("submit", (e) => {
       console.log(userCredential.user.uid)
       
       database.ref(userCredential.user.uid).set({
-        Applitacion: "Desactivado-184-30-5-1-1-0-0-0",
-        Dispositivo: "181-10-1-40-41-42",
+        Application: "Desactivado-184-30-5-1-1-0-0-0",
+        Device: "181-10-1-40-41-42",
         Username: username
       })
         .then(() => {
