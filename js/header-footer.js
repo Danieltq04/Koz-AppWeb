@@ -722,3 +722,123 @@ configurationForm.addEventListener("click", (e) => {
 
 
 
+
+
+
+/* 
+
+
+public class GalleryFragment extends Fragment {
+
+    private GalleryViewModel galleryViewModel;
+    private FragmentGalleryBinding binding;
+    DatabaseReference mDatabase;
+
+    private Button buttonExtractor;
+    ProgressDialog progress;
+    String estado_sanitizante, base_co2, base_ozono, base_minutos, estado_detener,
+            detener_por_co2, detener_por_ozono, detener_por_minutos, estado_extractor;
+    String cadena_push;
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        galleryViewModel =
+                new ViewModelProvider(this).get(GalleryViewModel.class);
+
+        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        progress = ProgressDialog.show(getContext(), "Koz",
+                "Iniciando...", true);
+        buttonExtractor = (Button) root.findViewById(R.id.buttonExtractor);
+
+        buttonExtractor.setOnClickListener(btnExtractor);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        String token_id = UserSharePreferences.getTokenId(getContext());
+
+        mDatabase.child(token_id).child("Application").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    //String nombre = snapshot.child("S8pCz46TNANzOTUkj0Iibd17vis2").getValue().toString();
+                    String nombre = snapshot.getValue().toString();
+                    //textView.setText(nombre);
+                    String[] partes = nombre.split("-");
+                    estado_sanitizante = partes[0];
+                    base_co2 = partes[1];
+                    base_ozono = partes[2];
+                    base_minutos = partes[3];
+                    estado_detener = partes[4];
+                    detener_por_co2 = partes[5];
+                    detener_por_ozono = partes[6];
+                    detener_por_minutos = partes[7];
+                    estado_extractor = partes[8];
+
+                    if(estado_extractor.equals("1")){
+                        buttonExtractor.setText("Activado");
+                        buttonExtractor.setBackgroundColor(getResources().getColor(R.color.on));
+                    }else{
+                        buttonExtractor.setText("Desactivado");
+                        buttonExtractor.setBackgroundColor(getResources().getColor(R.color.off));
+                    }
+                    progress.dismiss();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
+
+
+        //final TextView textView = binding.textGallery;
+        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+
+                //textView.setText(s);
+            }
+        });
+        return root;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+    private View.OnClickListener btnExtractor = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String user = UserSharePreferences.getTokenId(getContext());
+
+            if(estado_extractor.equals("1")){
+                estado_extractor = "0";
+
+            }else{
+                estado_extractor = "1";
+            }
+
+            mDatabase = FirebaseDatabase.getInstance().getReference().child(user);
+
+            //Toast.makeText(getContext(), "Deteniendo...", Toast.LENGTH_LONG).show();
+
+            mDatabase.child("Application").setValue(
+                    estado_sanitizante+"-"+base_co2+"-"+base_ozono+"-"+base_minutos+
+                            "-"+estado_detener+"-"+detener_por_co2+"-"+detener_por_ozono
+                            +"-"+detener_por_minutos+"-"+estado_extractor)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+
+                        }
+                    });
+        }
+    };
+}
+*/
