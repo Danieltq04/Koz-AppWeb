@@ -73,7 +73,7 @@ auth.onAuthStateChanged((user) => {
         console.log(valor);
         console.log(user);
         // debugger;
-        saveUserStorage(valor.Username, user.email)
+        saveUserStorage(valor.Username, user.email, user.uid)
         loginCheck(user);
 
       });
@@ -271,11 +271,13 @@ facebookButton.addEventListener('click', e => {
 
 
 
-function saveUserStorage(_username,_email){
+function saveUserStorage(_username,_email, _id){
+  debugger
     sessionStorage.setItem('userSave', 
         JSON.stringify({
             username: _username,
             email: _email,
+            id: _id
         }
         )
     );
